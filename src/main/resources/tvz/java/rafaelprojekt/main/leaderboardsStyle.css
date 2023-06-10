@@ -1,0 +1,39 @@
+.table-view .column-header:hover{
+    -fx-background-color: gray;
+}
+
+.table-view .table-column{
+    -fx-alignment:center;
+}
+
+.table-row-cell{
+    -fx-background-color: aqua;
+    -fx-text-fill: black;
+}
+
+.table-row-cell:selected{
+    -fx-text-background-color: red;
+}
+
+.tab-pane .tab-header-area .tab-header-background{
+    -fx-opacity: 0;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #b0acac;
+}
+
+.tab-pane .tab:selected{
+    -fx-background-color: black;
+    -fx-text-base-color: white;
+}
+
+
+.table-view .column-header .label{
+    -fx-text-fill: white;
+}
+
+.table-view .column-header{
+    -fx-background-color: black;
+}
+

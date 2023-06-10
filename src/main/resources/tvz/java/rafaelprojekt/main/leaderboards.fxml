@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@leaderboardsStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tvz.java.rafaelprojekt.main.LeaderboardsController">
+
+    <children>
+        <fx:include source="menu.fxml" translateX="15.0" translateY="550.0" />
+      <Text layoutX="336.0" layoutY="37.0" stroke="#f4f2f2" strokeType="OUTSIDE" strokeWidth="0.0" text="Leaderboards" wrappingWidth="128.706298828125">
+         <font>
+            <Font name="Book Antiqua" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="29.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Players on the server:" />
+      <TabPane layoutX="29.0" layoutY="76.0" prefHeight="467.0" prefWidth="748.0" stylesheets="@leaderboardsStyle.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab id="tab" fx:id="EuTab" text="EU">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="profileTableView" prefHeight="438.0" prefWidth="748.0" stylesheets="@leaderboardsStyle.css">
+                          <columns>
+                            <TableColumn fx:id="playersColumn" prefWidth="147.20001220703125" resizable="false" sortable="false" text="Players" />
+                            <TableColumn fx:id="rankColumn" prefWidth="94.4000244140625" resizable="false" sortable="false" text="Rank" />
+                              <TableColumn fx:id="winsColumn" prefWidth="29.5999755859375" resizable="false" sortable="false" text="W" />
+                              <TableColumn fx:id="lossColumn" prefWidth="29.5999755859375" resizable="false" text="L" />
+                              <TableColumn fx:id="winRatioColumn" prefWidth="127.20001220703125" resizable="false" text="Win Ratio" />
+                              <TableColumn fx:id="championsColumn" prefWidth="160.0" resizable="false" text="Most champions" />
+                              <TableColumn fx:id="levelColumn" prefWidth="68.79998779296875" resizable="false" text="Level" />
+                              <TableColumn fx:id="dateColumn" prefWidth="89.5999755859375" resizable="false" text="Last activity" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab id="tab" fx:id="NaTab" text="NA">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="profileTableView1" prefHeight="438.0" prefWidth="748.0">
+                           <columns>
+                              <TableColumn fx:id="playersColumn1" prefWidth="147.20001220703125" resizable="false" text="Players" />
+                              <TableColumn fx:id="rankColumn1" prefWidth="94.4000244140625" resizable="false" text="Rank" />
+                              <TableColumn fx:id="winsColumn1" prefWidth="29.5999755859375" resizable="false" text="W" />
+                              <TableColumn fx:id="lossColumn1" prefWidth="29.5999755859375" resizable="false" text="L" />
+                              <TableColumn fx:id="winRatioColumn1" prefWidth="127.20001220703125" resizable="false" text="Win Ratio" />
+                              <TableColumn fx:id="championsColumn1" prefWidth="160.0" resizable="false" text="Most champions" />
+                              <TableColumn fx:id="levelColumn1" prefWidth="68.79998779296875" resizable="false" text="Level" />
+                              <TableColumn fx:id="dateColumn1" prefWidth="89.5999755859375" resizable="false" text="Last activity" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab id="tab" fx:id="LamTab" text="LAM">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="profileTableView2" prefHeight="438.0" prefWidth="748.0">
+                           <columns>
+                              <TableColumn fx:id="playersColumn2" prefWidth="147.20001220703125" resizable="false" text="Players" />
+                              <TableColumn fx:id="rankColumn2" prefWidth="94.4000244140625" resizable="false" text="Rank" />
+                              <TableColumn fx:id="winsColumn2" prefWidth="29.5999755859375" resizable="false" text="W" />
+                              <TableColumn fx:id="lossColumn2" prefWidth="29.5999755859375" resizable="false" text="L" />
+                              <TableColumn fx:id="winRatioColumn2" prefWidth="127.20001220703125" resizable="false" text="Win Ratio" />
+                              <TableColumn fx:id="championsColumn2" prefWidth="160.0" resizable="false" text="Most champions" />
+                              <TableColumn fx:id="levelColumn2" prefWidth="68.79998779296875" resizable="false" text="Level" />
+                              <TableColumn fx:id="dateColumn2" prefWidth="89.5999755859375" resizable="false" text="Last activity" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Text fx:id="profilesCount" layoutX="142.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <ImageView fitHeight="44.0" fitWidth="102.0" layoutX="217.0" layoutY="550.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="levelFilter" layoutX="597.0" layoutY="21.0" prefHeight="16.0" prefWidth="24.0">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </TextField>
+      <RadioButton fx:id="lessRadioButton" layoutX="526.0" layoutY="23.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="30.0" text="&lt;">
+         <toggleGroup>
+            <ToggleGroup fx:id="toggleGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="equalsRadioButton" layoutX="485.0" layoutY="23.0" mnemonicParsing="false" text="=" toggleGroup="$toggleGroup" />
+      <RadioButton fx:id="greaterRadioButton" layoutX="563.0" layoutY="23.0" mnemonicParsing="false" prefHeight="5.0" prefWidth="30.0" text="&gt;" toggleGroup="$toggleGroup" />
+      <Label layoutX="595.0" layoutY="5.0" text="Level" />
+      <Label layoutX="665.0" layoutY="6.0" text="Wins" />
+      <Label layoutX="719.0" layoutY="6.0" text="Loses" />
+      <TextField fx:id="winsFilter" layoutX="666.0" layoutY="22.0" prefHeight="4.0" prefWidth="24.0">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="lossFilter" layoutX="722.0" layoutY="21.0" prefHeight="4.0" prefWidth="24.0">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </TextField>
+      <DatePicker fx:id="datePicker" layoutX="590.0" layoutY="46.0" />
+      <ChoiceBox fx:id="championChoiceBox" layoutX="504.0" layoutY="46.0" prefHeight="26.0" prefWidth="74.0" />
+      <ChoiceBox fx:id="rankChoiceBox" layoutX="363.0" layoutY="46.0" prefHeight="13.0" prefWidth="74.0" />
+      <TextField fx:id="usernameFilter" layoutX="191.0" layoutY="46.0" prefHeight="19.0" prefWidth="112.0" />
+      <Label layoutX="191.0" layoutY="24.0" text="username" />
+      <Button layoutX="29.0" layoutY="20.0" mnemonicParsing="false" onAction="#filterClicked" text="Filter" />
+      <Button layoutX="85.0" layoutY="20.0" mnemonicParsing="false" onAction="#resetButtonClicked" text="Reset" />
+      <Button fx:id="addButton" layoutX="-10.0" mnemonicParsing="false" onAction="#addNewClicked" prefHeight="24.0" prefWidth="112.0" style="-fx-border-radius: 10px;" styleClass="ipad-grey" stylesheets="@addButtonStyle.css" text="Add new" translateX="660.0" translateY="550.0" />
+    </children>
+
+</AnchorPane>

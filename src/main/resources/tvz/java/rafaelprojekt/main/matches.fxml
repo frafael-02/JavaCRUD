@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="640.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tvz.java.rafaelprojekt.main.MatchesController">
+
+    <children>
+      <AnchorPane fx:id="mainPane" prefHeight="640.0" prefWidth="800.0">
+      <children>
+          <fx:include source="menu.fxml" translateX="10.0" translateY="590.0" />
+          <Text layoutX="328.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Match history" wrappingWidth="144.43359375">
+              <font>
+                  <Font size="21.0" />
+              </font>
+          </Text>
+          <Button layoutX="34.0" layoutY="50.0" mnemonicParsing="false" onAction="#filterClicked" text="Filter" />
+          <Button layoutX="88.0" layoutY="50.0" mnemonicParsing="false" onAction="#resetClicked" text="Reset" />
+          <ChoiceBox fx:id="redSidePlayer" layoutX="154.0" layoutY="49.0" prefHeight="26.0" prefWidth="97.0" />
+          <Label layoutX="179.0" layoutY="33.0" text="Red side:" />
+          <Label layoutX="277.0" layoutY="33.0" text="Blue side:" />
+          <ChoiceBox fx:id="blueSidePlayer" layoutX="261.0" layoutY="49.0" prefHeight="26.0" prefWidth="98.0" />
+          <DatePicker fx:id="datePicker" layoutX="544.0" layoutY="72.0" />
+          <Label layoutX="554.0" layoutY="53.0" text="Date:" />
+          <ChoiceBox fx:id="redSideChampion" layoutX="151.0" layoutY="107.0" prefHeight="26.0" prefWidth="98.0" />
+          <Label layoutX="172.0" layoutY="89.0" text="Champion:" />
+          <ChoiceBox fx:id="blueSideChampion" layoutX="261.0" layoutY="107.0" prefHeight="26.0" prefWidth="98.0" />
+          <Label layoutX="281.0" layoutY="89.0" text="Champion:" />
+          <TextField fx:id="totalKillsField" layoutX="419.0" layoutY="108.0" prefHeight="26.0" prefWidth="78.0" />
+          <Label layoutX="432.0" layoutY="89.0" text="Total kills:" />
+          <RadioButton fx:id="equalsButton" layoutX="511.0" layoutY="113.0" mnemonicParsing="false" text="=" />
+          <RadioButton fx:id="lessButton" layoutX="589.0" layoutY="114.0" mnemonicParsing="false" text="&lt;" />
+          <RadioButton fx:id="greaterButton" layoutX="553.0" layoutY="114.0" mnemonicParsing="false" text="&gt;" />
+          <Label layoutX="23.0" layoutY="99.0" text="Any side Champion:" />
+          <ChoiceBox fx:id="anySideChampion" layoutX="19.0" layoutY="121.0" prefHeight="26.0" prefWidth="113.0" />
+          <ChoiceBox fx:id="serverChoiceBox" layoutX="632.0" layoutY="20.0" prefHeight="26.0" prefWidth="58.0" />
+          <Label layoutX="589.0" layoutY="24.0" text="Server:" />
+          <TableView fx:id="matchTableView" layoutX="5.0" layoutY="173.0" prefHeight="405.0" prefWidth="790.0" stylesheets="@style.css">
+              <columns>
+                  <TableColumn fx:id="redSideColumn" prefWidth="108.0" text="Red side" />
+                  <TableColumn fx:id="blueSideColumn" prefWidth="100.79998779296875" text="Blue side" />
+                  <TableColumn fx:id="winnerColumn" prefWidth="63.20001220703125" text="Winner" />
+                  <TableColumn fx:id="redChampionColumn" prefWidth="136.0" text="Red champion" />
+                  <TableColumn fx:id="blueChampionColumn" prefWidth="101.5999755859375" text="Blue champion" />
+                  <TableColumn fx:id="dateColumn" prefWidth="125.60003662109375" text="Date" />
+                  <TableColumn fx:id="blueKillsColumn" editable="false" prefWidth="52.0" text="B kills" />
+                  <TableColumn fx:id="redKillsColumn" prefWidth="53.5999755859375" text="R kills" />
+                  <TableColumn fx:id="serverColumn" prefWidth="47.20004882812498" text="Server" />
+              </columns>
+          </TableView>
+          <ImageView fitHeight="42.0" fitWidth="106.0" layoutX="405.0" layoutY="590.0" pickOnBounds="true" preserveRatio="true" />
+          <Button fx:id="addButton" layoutX="645.0" layoutY="590.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addNewClicked" prefHeight="41.0" prefWidth="90.0" text="Add new" />
+          <Button layoutX="744.0" layoutY="583.0" mnemonicParsing="false" onAction="#deleteClicked" text="Delete" />
+          <Button fx:id="editButton" disable="true" layoutX="746.0" layoutY="611.0" mnemonicParsing="false" onAction="#editClicked" prefHeight="18.0" prefWidth="46.0" text="Edit" />
+      </children>
+
+      </AnchorPane>
+      <AnchorPane fx:id="editPane" layoutX="130.0" layoutY="110.0" prefHeight="406.0" prefWidth="554.0" visible="false">
+         <children>
+            <ImageView fitHeight="406.0" fitWidth="554.0" pickOnBounds="true">
+               <image>
+                  <Image url="@images/editBackground.jpg" />
+               </image>
+            </ImageView>
+            <Button layoutX="454.0" layoutY="367.0" mnemonicParsing="false" onAction="#cancelClicked" text="Cancel" />
+            <Button layoutX="399.0" layoutY="367.0" mnemonicParsing="false" onAction="#editClicked" text="Reset" />
+            <Button layoutX="345.0" layoutY="367.0" mnemonicParsing="false" onAction="#editSaveClicked" text="Save" />
+            <ChoiceBox fx:id="editRedProfile" layoutX="74.0" layoutY="49.0" prefHeight="26.0" prefWidth="98.0" />
+            <Label layoutX="81.0" layoutY="31.0" text="Red Side player:" />
+            <ChoiceBox fx:id="editBlueProfile" layoutX="191.0" layoutY="49.0" prefHeight="26.0" prefWidth="98.0" />
+            <Label layoutX="198.0" layoutY="31.0" text="Blue side player:" />
+            <Label layoutX="72.0" layoutY="97.0" text="Red Side champion:" />
+            <ChoiceBox fx:id="editRedChampion" layoutX="72.0" layoutY="115.0" prefHeight="26.0" prefWidth="106.0" />
+            <Label layoutX="187.0" layoutY="97.0" text="Blue side champion:" />
+            <ChoiceBox fx:id="editBlueChampion" layoutX="187.0" layoutY="115.0" prefHeight="26.0" prefWidth="106.0" />
+            <TextField fx:id="editRedKills" layoutX="98.0" layoutY="166.0" prefHeight="26.0" prefWidth="53.0" />
+            <TextField fx:id="editBlueKills" layoutX="214.0" layoutY="166.0" prefHeight="26.0" prefWidth="53.0" />
+            <Label layoutX="35.0" layoutY="170.0" text="Kills:" />
+            <DatePicker fx:id="editDatePicker" layoutX="100.0" layoutY="218.0" />
+            <Label layoutX="33.0" layoutY="222.0" text="Date:" />
+            <ChoiceBox fx:id="editWinner" layoutX="355.0" layoutY="116.0" prefHeight="26.0" prefWidth="90.0" />
+            <Label layoutX="379.0" layoutY="97.0" text="Winner:" />
+            <ChoiceBox fx:id="editServer" layoutX="369.0" layoutY="49.0" prefHeight="26.0" prefWidth="58.0" />
+            <Label layoutX="381.0" layoutY="31.0" text="Server:" />
+         </children>
+      </AnchorPane>
+    </children>
+
+</AnchorPane>

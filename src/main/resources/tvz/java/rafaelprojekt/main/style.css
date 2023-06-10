@@ -1,0 +1,62 @@
+
+.menubar1{
+    -fx-background-color: rgba(49, 188, 234, 1);
+
+}
+.menubar1:hover{
+    -fx-border-color: #ddd7e7;
+    -fx-border-width: 5px 0px 4px 0px;
+
+}
+
+.menubar1:pressed{
+
+    -fx-background-color: white;
+
+
+}
+
+.searchBackground{
+    -fx-background-image: url("images/searchBackground.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+    -fx-background-size: 900 600;
+
+}
+
+
+#choice-box-menu-item:pressed {
+    -fx-background-color: lightcoral;
+}
+
+.choice-box{
+    -fx-background-color: rgba(54, 46, 154, 0.8);
+}
+
+.choice-box .context-menu{
+    -fx-background-color: rgba(54, 46, 154, 0.8);
+
+}
+
+.choice-box > .label{
+    -fx-text-fill: white;
+}
+.choice-box .menu-item > .label { -fx-text-fill: white; }
+
+.table-view .column-header{
+    -fx-font-size:10px;
+
+}
+
+.table-view .column-header:hover{
+    -fx-background-color: gray;
+}
+
+.table-view .table-column{
+    -fx-alignment:center;
+}
+
+.table-row-cell:hover {
+    -fx-background-color:orange;
+}
+

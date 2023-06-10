@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="392.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tvz.java.rafaelprojekt.main.NewMatchController">
+   <children>
+      <Text layoutX="331.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add new match">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="serverChoiceBox" layoutX="95.0" layoutY="86.0" prefHeight="26.0" prefWidth="62.0" />
+      <Label layoutX="13.0" layoutY="91.0" text="Select a server" />
+      <ChoiceBox fx:id="redSidePlayerChoiceBox" disable="true" layoutX="82.0" layoutY="146.0" prefHeight="26.0" prefWidth="88.0" />
+      <ChoiceBox fx:id="blueSidePlayerChoiceBox" disable="true" layoutX="82.0" layoutY="212.0" prefHeight="26.0" prefWidth="88.0" />
+      <Label layoutX="27.0" layoutY="150.0" text="Red side:" />
+      <Label layoutX="27.0" layoutY="216.0" text="Blue side" />
+      <ChoiceBox fx:id="redSideChampionChoiceBox" disable="true" layoutX="197.0" layoutY="147.0" prefHeight="26.0" prefWidth="88.0" />
+      <ChoiceBox fx:id="blueSideChampionChoiceBox" disable="true" layoutX="197.0" layoutY="211.0" prefHeight="26.0" prefWidth="88.0" />
+      <Label layoutX="112.0" layoutY="123.0" text="Player:" />
+      <Label layoutX="112.0" layoutY="187.0" text="Player:" />
+      <Label layoutX="213.0" layoutY="123.0" text="Champion:" />
+      <Label layoutX="213.0" layoutY="187.0" text="Champion:" />
+      <ChoiceBox fx:id="winnerChoiceBox" disable="true" layoutX="198.0" layoutY="309.0" prefHeight="26.0" prefWidth="88.0" />
+      <Label layoutX="149.0" layoutY="313.0" text="Winner:" />
+      <TextField fx:id="redKillsTextField" disable="true" layoutX="305.0" layoutY="148.0" prefHeight="26.0" prefWidth="62.0" />
+      <TextField fx:id="bluekillsTextField" disable="true" layoutX="305.0" layoutY="212.0" prefHeight="26.0" prefWidth="62.0" />
+      <Label layoutX="324.0" layoutY="123.0" text="Kills:" />
+      <Label layoutX="324.0" layoutY="187.0" text="Kills:" />
+      <Text layoutX="476.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status:" />
+      <Text fx:id="statusText" layoutX="525.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <DatePicker fx:id="datePicker" layoutX="213.0" layoutY="87.0" />
+      <Label layoutX="183.0" layoutY="91.0" text="Date:" />
+      <Button layoutX="494.0" layoutY="321.0" mnemonicParsing="false" onAction="#addClicked" prefHeight="26.0" prefWidth="58.0" text="Add" />
+      <Button layoutX="565.0" layoutY="322.0" mnemonicParsing="false" onAction="#resetClicked" prefHeight="26.0" prefWidth="58.0" text="Reset" />
+      <Button layoutX="635.0" layoutY="322.0" mnemonicParsing="false" onAction="#goBackClicked" text="Go back" />
+      <Text layoutX="55.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="It will automaticly increase a win count or a loss count" />
+   </children>
+</AnchorPane>

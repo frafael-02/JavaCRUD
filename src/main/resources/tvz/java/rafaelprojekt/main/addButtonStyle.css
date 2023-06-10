@@ -1,0 +1,22 @@
+.ipad-grey {
+    -fx-background-color: linear-gradient(#9292dc 0%, #dee7de 25%, #91c591 75%, #3737ea 100%),
+    linear-gradient(#9a9adc, #7ebde0),
+    linear-gradient(#8fcaef 0%, #56b8ea 20%, #37a0e1 80%, #0498e3 100%),
+    linear-gradient(#b8d9f3 0%, #c3ddee 50%, #b8b8f6 51%, #d7d7d7 100%);
+    -fx-background-insets: 0, 1, 4, 5;
+    -fx-background-radius: 9, 8, 5, 4;
+    -fx-padding: 15 30 15 30;
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #643030;
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.2), 1, 0.0, 0, 1);
+}
+.ipad-grey Text {
+    -fx-effect: dropshadow( one-pass-box , white , 0, 0.0 , 0 , 1 );
+    -fx-text-fill: white;
+}
+
+.ipad-grey:pressed {
+    -fx-font-size: 8px;
+}
